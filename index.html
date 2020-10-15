@@ -1,0 +1,139 @@
+
+
+
+<html>
+
+    <head>
+    
+    
+        <title>SideBar JavaScript</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+       <script src="app.js"></script> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <script src="https://use.fontawesome.com/031e3862f6.js"></script>
+
+        <style>
+            body{
+                background-color:#F1F5F8 ;
+                padding: 0;
+                margin: 0;
+
+
+            }
+            #top_div{
+
+                background-color: #2C2E31;
+                position: relative;
+                bottom: 0;
+                height: 50vh;
+            }
+            #container{
+                position: absolute;
+                top:20%;
+                left:35%;
+                border-radius: 10px;
+                width: 40vw;
+                height: auto;
+                background-color: #FFFFFF;
+               
+                box-shadow: 5px 5px 8px black;
+                text-align: center;
+                padding-bottom: 15px;
+                
+            }
+            #top{
+                background-color: F1F5F8;
+                border-bottom: 1px solid #B5B8BA ;
+                height: 8vw;
+                
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+
+            }
+            #image_container{
+                background-color: white;
+                border: 1px solid #B5B8BA ;
+                border-radius: 50%;
+                width: 10vw;
+                height: 10vw;
+                position: absolute;
+                top:15;
+                left:37%;
+                padding: 5px;
+               
+
+            }
+            .description{
+               
+                padding-top: 50px;
+                font-size: 17px;
+               
+                color:#617D98;
+            }
+            .result{
+               padding: 0;
+               margin: 0;
+                color:#102A42;
+            }
+            span{
+                color:#617D98;
+                font-size: 3rem;
+                padding:5px 20px;
+                cursor: pointer;
+            }
+            #btn{
+                background-color: #49A6E9;
+                color:white;
+                letter-spacing: 4px;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+
+            }
+            .image{
+                border-radius: 50%;
+                object-fit: cover;
+           
+                height: 100%;
+                width: 100%;
+            }
+
+
+        </style>
+        
+    
+        
+    </head>
+
+
+    <body>
+
+        <div id="top_div"></div>
+
+        <div id="container">
+            <div id="top"></div>
+            <div id="image_container"><img class="image" src="https://randomuser.me/api/portraits/women/49.jpg"></div>
+            <p  class="description">Hi my name is</p>
+            <h1 class="result">Rachel Phelps</h1>
+            <p id="icons"><span id="name"><i class="fa fa-user"></i></span><span id="email"><i class="fa fa-envelope-open"></i></span><span id="age"><i class="fa fa-calendar"></i></span><span id="address"><i class="fa fa-map"></i></span><span id="phone"><i class="fa fa-phone"></i></span><span id="password"><i class="fa fa-lock"></i></span></p>
+            <button id="btn">Random User</button>
+
+        </div>
+
+       
+
+
+        <script>
+
+
+
+
+        </script>
+        
+   
+    </body>
+
+
+</html>
