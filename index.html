@@ -31,7 +31,7 @@
             #container{
                 position: absolute;
                 top:20%;
-                left:35%;
+                left:30%;
                 border-radius: 10px;
                 width: 40vw;
                 height: auto;
@@ -92,12 +92,22 @@
                 cursor: pointer;
 
             }
+            #btn:hover{
+                color:#49A6E9;
+                background: rgba(0,0,0,0.2);
+            }
+            span:hover{
+                color:#49A6E9;
+            }
             .image{
                 border-radius: 50%;
                 object-fit: cover;
            
                 height: 100%;
                 width: 100%;
+            }
+            .active{
+                color:#49A6E9;
             }
 
 
@@ -117,7 +127,7 @@
             <div id="image_container"><img class="image" src="https://randomuser.me/api/portraits/women/49.jpg"></div>
             <p  class="description">Hi my name is</p>
             <h1 class="result">Rachel Phelps</h1>
-            <p id="icons"><span id="name"><i class="fa fa-user"></i></span><span id="email"><i class="fa fa-envelope-open"></i></span><span id="age"><i class="fa fa-calendar"></i></span><span id="address"><i class="fa fa-map"></i></span><span id="phone"><i class="fa fa-phone"></i></span><span id="password"><i class="fa fa-lock"></i></span></p>
+            <p id="icons"><span id="name" class="active"><i class="fa fa-user"></i></span><span id="email"><i class="fa fa-envelope-open"></i></span><span id="age"><i class="fa fa-calendar"></i></span><span id="address"><i class="fa fa-map"></i></span><span id="phone"><i class="fa fa-phone"></i></span><span id="password"><i class="fa fa-lock"></i></span></p>
             <button id="btn">Random User</button>
 
         </div>
