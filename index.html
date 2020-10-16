@@ -9,7 +9,8 @@
         <title>SideBar JavaScript</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"> 
-       <script src="app.js"></script> 
+       <script  src="app.js"></script> 
+
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
         <script src="https://use.fontawesome.com/031e3862f6.js"></script>
 
@@ -64,14 +65,14 @@
                
 
             }
-            .description{
+            #description{
                
                 padding-top: 50px;
                 font-size: 17px;
                
                 color:#617D98;
             }
-            .result{
+            #result{
                padding: 0;
                margin: 0;
                 color:#102A42;
@@ -124,9 +125,9 @@
 
         <div id="container">
             <div id="top"></div>
-            <div id="image_container"><img class="image" src="https://randomuser.me/api/portraits/women/49.jpg"></div>
-            <p  class="description">Hi my name is</p>
-            <h1 class="result">Rachel Phelps</h1>
+            <div id="image_container"><img id="photo" class="image" src="https://randomuser.me/api/portraits/women/49.jpg"></div>
+            <p  id="description">Hi my name is</p>
+            <h1 id="result">Rachel Phelps</h1>
             <p id="icons"><span id="name" class="active"><i class="fa fa-user"></i></span><span id="email"><i class="fa fa-envelope-open"></i></span><span id="age"><i class="fa fa-calendar"></i></span><span id="address"><i class="fa fa-map"></i></span><span id="phone"><i class="fa fa-phone"></i></span><span id="password"><i class="fa fa-lock"></i></span></p>
             <button id="btn">Random User</button>
 
