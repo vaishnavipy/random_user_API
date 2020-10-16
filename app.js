@@ -17,12 +17,12 @@ window.onload = function(){
     }*/
 
 //let user_data = fetchUsers("https://randomuser.me/api/");
-let user_data 
 
 
 
 
-let final_result;
+
+let final_result,name;
 const photo = document.getElementById("photo");
 
 const element = document.querySelectorAll("span");
@@ -48,11 +48,21 @@ function generateUser(){
     .then(data => { 
 
         final_result = data["results"][0];
+
+
+        const {first,last} = final_result.name;
+
+        name = `${first} ${last}`;
+
+        const{large : image} = final_result.picture;
+
+
+
         desc_para.textContent="My name is";
         
-        result_para.textContent=`${final_result["name"]["first"]} ${final_result["name"]["last"]}`;
+        result_para.textContent=`${first} ${last}`;
     
-        photo.setAttribute("src",final_result["picture"]["large"]);
+        photo.setAttribute("src",image);
     
 
 
@@ -69,7 +79,7 @@ function generateUser(){
 
 
   
-console.log(user_data)
+
     
 
 
@@ -79,17 +89,38 @@ function displayInfo(){
     console.log(this.id)
 
     element.forEach(elm => elm.classList.remove("active"));
-  
+  const {email} = final_result;
+  const {age} = final_result.dob;
+  const {number,name} = final_result.location.street;
+  const {phone} = final_result;
 
-if(this.id == "name"){
+    
 
-        desc_para.textContent="My name is";
-        
-        result_para.textContent=`${final_result["name"]["first"]} ${final_result["name"]["last"]}`;
-        this.classList.add("active");
-}
+  const {password} = final_result.login;
 
-if(this.id == "email"){
+  const address = `${number} ${name}`;
+
+  let label = this.id;
+
+  const person = {name,email,age,phone,address,password};
+
+
+ 
+
+  desc_para.textContent=`My ${label} is`;
+
+  result_para.textContent=`${person[label]}`;
+
+  this.classList.add("active");
+
+
+
+
+
+
+
+
+/* if(this.id == "email"){
 
     desc_para.textContent="My email is";
         
@@ -141,7 +172,7 @@ if(this.id == "password"){
     this.classList.add("active");
 
 
-}
+} */
 
 
 }
