@@ -78,48 +78,67 @@ console.log(user_data)
 function displayInfo(){
     console.log(this.id)
 
+    element.forEach(elm => elm.classList.remove("active"));
+  
+
 if(this.id == "name"){
 
         desc_para.textContent="My name is";
         
         result_para.textContent=`${final_result["name"]["first"]} ${final_result["name"]["last"]}`;
+        this.classList.add("active");
 }
+
 if(this.id == "email"){
 
     desc_para.textContent="My email is";
         
     result_para.textContent=`${final_result["email"]} `;
+    this.classList.add("active");
 
 
 }
+
 if(this.id == "age"){
 
     desc_para.textContent="My age is";
         
     result_para.textContent=`${final_result["dob"]["age"]} `;
 
+    this.classList.add("active");
+
 
 }
+
 if(this.id == "address"){
 
     desc_para.textContent="My address is";
         
     result_para.textContent=`${final_result["location"]["street"]["number"]} ${final_result["location"]["street"]["name"]} `;
 
+    this.classList.add("active");
+
 
 }
+
 if(this.id == "phone"){
 
     desc_para.textContent="My phone is";
         
     result_para.textContent=`${final_result["phone"]} `;
 
+    this.classList.add("active");
 
-}if(this.id == "password"){
+
+}
+
+if(this.id == "password"){
 
     desc_para.textContent="My password is";
         
     result_para.textContent=`${final_result["login"]["password"]} `;
+
+    this.classList.add("active");
 
 
 }
